@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap');
+
+/*GERAL*/
+:root {
+    --background: #FFF;
+    --primary-color: 158, 171, 178;
+    --secondary-color: #4C545C;
+    --color-button-primary: 38, 187, 164;
+    --color-button-secondary: 97, 116, 255;
+    --color-button-contrast: #FFF;
+    --btn-primary-shadow-1: 137, 229, 199;
+    --btn-primary-shadow-2: 0, 0, 0;
+    --btn-secondary-shadow: 0, 0, 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: var(--background);
+}
+
+body * {
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 2.6rem;
+    color: rgb(var(--primary-color));
+    text-align: center;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/*
+@media screen and (min-width: 1440px) {
+    .container {
+        max-width: 1440px;
+    }
+}
+*/
+
+/*PARTE-1*/
+.flex-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+
+.button {
+    font-size: 1.8rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 28px;
+    color: var(--color-button-contrast);
+    padding: 13px 45px;
+    cursor: pointer;
+    transition: .3 all;
+}
+
+.btn-primary {
+    background-color: rgb(var(--color-button-primary));
+    box-shadow: 0px 10px 20px 0px rgba(var(--btn-primary-shadow-1), 0.50), 0px -3px 0px 0px rgba(var(--btn-primary-shadow-2), 0.15) inset;
+}
+
+.btn-primary:hover {
+    background-color: rgba(var(--color-button-primary), 0.65);
+}
+
+.btn-secondary {
+    background-color: rgb(var(--color-button-secondary));
+    box-shadow: 0px 10px 20px 0px rgba(var(--btn-secondary-shadow), 0.10), 0px -3px 0px 0px rgba(var(--btn-secondary-shadow), 0.15) inset;
+}
+
+.btn-secondary:hover {
+    background-color: rgba(var(--color-button-secondary), 0.65)
+}
+
+@media screen and (min-width: 1440px) {
+        .flex-button {
+        flex-direction: row;
+        gap: 16px;
+    }
+
+    .button {
+        padding: 13px 35px;
+    }
+}
+
+/*PARTE-2*/
+.header {
+    background-image: url(./images/bg-header-mobile.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 155px;
+}
+
+@media screen and (min-width: 1440px) {
+    .header {
+        background-image: url(./images/bg-header-desktop.png);
+        background-position: bottom;
+        /*ela já é cover e no-repeat?*/
+        /*mix-blend-mode: color;*/
+    }
+}
+
+.logo-header {
+    width: 125px;
+    display: block;
+    margin: 0 auto;
+    padding-top: 120px;
+    padding-bottom: 60px;
+}
+
+.heading {
+    color: var(--secondary-color);
+    font-weight: 600;
+    margin-bottom: 13px;
+}
+
+.heading-l {
+    font-size: 3.2rem;
+}
+
+.heading-m {
+    font-size: 2.8rem;
+}
+
+.heading-s {
+    font-size: 2.4rem;
+}
+
+@media screen and (min-width: 1440px) {
+    .heading-l {
+        font-size: 4.6rem;
+    }
+
+    .heading-m {
+        font-size: 3.6rem;
+    }
+}
+
+header .description {
+    margin-bottom: 48px;
+}
+
+/*PARTE-3*/
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(var(--primary-color), .1);
+}
+
+footer .logo-footer {
+    width: 55px;
+    margin-top: 52px;
+    margin-bottom: 40px;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+footer a:hover {
+    color: rgb(var(--color-button-primary));
+}
+
+footer .footer-item {
+    display: flex;
+    flex-direction: column;
+}
+
+footer .footer-item-icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/*footer .icon-item:hover {
+    fill: rgb(var(--color-button-primary));
+} como mudar a cor aqui desses svgs?*/
+
+@media screen and (min-width: 1440px) {
+    .footer {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        justify-content: space-around;
+    }
+
+    .footer-item-container {
+        display: flex;
+        flex-direction: row;
+        gap: 60px;
+    }
+
+    /*footer .footer-item {
+        justify-content: flex-start;
+    } não funcionou*/
+}
+
+/*PARTE-4*/
+.description-keep-track {
+    margin-bottom: 70px;
+}
+
+.quick-search-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.img-computer {
+    width: 312px;
+    display: block;
+    margin: 0 auto;
+}
+
+.item-quick-search {
+    margin-top: 52px;
+}
+
+@media screen and (min-width: 1440px) {
+    .quick-search-container {
+        min-height: 752px;
+        flex-direction: row;
+    }
+
+    .quick-search-container-box-1, .quick-search-container-box-2 {
+        width: 50%;
+    }
+
+    .quick-search-container-box-1 {
+        position: relative;
+    }
+
+    .quick-search-container-box-2 {
+        text-align: left;
+    }
+
+    .img-computer {
+        width: 752px;
+        position: absolute;
+        left: -35px;
+    }
+}
+
+/*PARTE-5*/
+.heading-access {
+    margin-top: 186px;
+}
+
+.img-devices {
+    width: 340px;
+    display: block;
+    margin: 0 auto; /*vericar se realmente vou usar esse margin 0 auto aqui*/
+    margin-top: 65px;
+}
+
+@media screen and (min-width: 1440px) {
+    .heading-access {
+        margin-top: 0px;
+    }
+
+    .img-devices {
+        width: 880px;
+        margin-top: 112px;
+    }
+}
+
+.heading-supercharge {
+    margin-top: 85px;
+}
+
+.description-supercharge {
+    margin-bottom: 34px;
+}
+
+@media screen and (min-width: 1440px) {
+    .description-supercharge {
+        margin-bottom: 76px;
+    }
+}
+
+/*PARTE-6*/
+.workflow-tools {
+    display: flex;
+    flex-direction: column;
+}
+
+.workflow-tools-item {
+    text-align: center;
+    margin-top: 56px;
+}
+
+.image-workflow {
+    margin-bottom: 42px;
+}
+
+@media screen and (min-width: 1440px) {
+    .workflow-tools {
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    .workflow-tools-item {
+        margin-top: 0px;
+    }
+}
+
+/*PARTE-7*/
+.variable-logos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 57px;
+    margin: 132px 0px;
+}
+
+.variable-logos img {
+    width: 139px;
+}
+
+@media screen and (min-width: 1440px) {
+    .variable-logos {
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 162px 0px;
+    }
+}
+
+/*PARTE-8*/
+.description-clipboard {
+    margin-bottom: 46px;
+}
+
+.clipboard-container {
+    margin-bottom: 160px;
+}
